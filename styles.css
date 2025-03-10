@@ -1,0 +1,227 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+}
+
+.editor {
+    display: flex;
+    gap: 20px;
+}
+
+.preview {
+    flex: 1;
+    border: 1px solid #ccc;
+    padding: 20px;
+    text-align: center;
+}
+
+.badge {
+    position: relative;
+    display: inline-block;
+    width: 54mm;
+    height: 85mm;
+    border: 1px solid #ccc;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.photo-circle {
+    width: 82px; /* 21.6 мм ≈ 82 px */
+    height: 82px;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: #e0e0e0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 32px auto 16px; /* Отступ сверху 32px (8.5 мм), снизу 16px (4.25 мм) */
+    position: relative;
+}
+
+.photo-circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: none;
+    position: absolute;
+    cursor: move;
+}
+
+.upload-label {
+    cursor: pointer;
+    color: #007bff;
+    font-size: 14px;
+    text-align: center;
+}
+
+.photo-circle input[type="file"] {
+    display: none;
+}
+
+.text-fields input {
+    display: block;
+    margin: 3px auto; /* Отступ между полями 3px (примерно 0.8 мм) */
+    padding: 5px;
+    width: 80%;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    outline: none;
+}
+
+.controls {
+    flex: 0 0 200px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.controls input[type="range"] {
+    width: 100%;
+}
+
+.controls button {
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.controls button:hover {
+    background-color: #0056b3;
+}
+
+.bottom-images {
+    position: absolute;
+    bottom: 20px; /* Отступ снизу 16px (4.25 мм) */
+    left: 20px; /* Отступ слева 16px */
+    right: 20px; /* Отступ справа 16px */
+    display: flex;
+    justify-content: space-between;
+    width: calc(100% - 40px);
+}
+
+.bottom-left, .bottom-right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bottom-left svg {
+    width: 55px; /* 8.1 мм ≈ 31 px */
+    height: 40px;
+}
+
+.bottom-right svg {
+    width: 40px; /* 5.4 мм ≈ 20 px */
+    height: 40px;
+}
+
+.live-preview {
+    margin-top: 40px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+}
+
+.live-preview h2 {
+    text-align: center;
+}
+
+.final-badge {
+    width: 54mm;
+    height: 85mm;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: left;
+    position: relative;
+}
+
+.final-photo-circle {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: #e0e0e0;
+    margin: 6px 0 0 0; /* Те же отступы */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.final-photo-circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: none;
+}
+
+.final-text-fields {
+    margin-top: 16px; /* Отступ сверху от фото */
+}
+
+.final-text-fields p {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.final-text-fields p#finalLastName {
+    font-size: 18px; /* 18 pt ≈ 24 px */
+    font-weight: bold;
+}
+
+.final-text-fields p#finalFirstName {
+    font-size: 18px; /* 18 pt ≈ 24 px */
+    font-weight: normal;
+    margin-top: 0; /* Отступ между фамилией и именем 6px (1.7 мм) */
+}
+
+.final-text-fields p#finalUsername {
+    font-size: 12px; /* 10 pt ≈ 13 px */
+    font-weight: bold;
+    margin-top: 5px; /* Отступ между именем и юзернеймом 16px (4.25 мм) */
+}
+
+.pdf-preview {
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+}
+
+.pdf-preview h2 {
+    text-align: center;
+}
+
+.pdf-preview iframe {
+    margin-top: 10px;
+}
+
+.pdf-preview button {
+    display: block;
+    margin: 10px auto;
+    padding: 10px;
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.pdf-preview button:hover {
+    background-color: #c82333;
+}
